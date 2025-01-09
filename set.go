@@ -62,6 +62,7 @@ func (c *Client) ListSets(ctx context.Context) ([]Set, error) {
 	if err != nil {
 		return nil, err
 	}
+
 	return sets, nil
 }
 

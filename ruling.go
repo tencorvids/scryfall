@@ -13,6 +13,7 @@ const (
 )
 
 type Ruling struct {
+	OracleID    string `json:"oracle_id"`
 	Source      Source `json:"source"`
 	PublishedAt Date   `json:"published_at"`
 	Comment     string `json:"comment"`
