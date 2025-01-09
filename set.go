@@ -48,8 +48,10 @@ type Set struct {
 	Block         *string `json:"block"`
 	ParentSetCode string  `json:"parent_set_code"`
 	CardCount     int     `json:"card_count"`
+	PrintedSize   *int    `json:"printed_size"`
 	Digital       bool    `json:"digital"`
 	FoilOnly      bool    `json:"foil_only"`
+	NonfoilOnly   bool    `json:"nonfoil_only"`
 	IconSVGURI    string  `json:"icon_svg_uri"`
 	SearchURI     string  `json:"search_uri"`
 }
