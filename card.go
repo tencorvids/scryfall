@@ -3,8 +3,10 @@ package scryfall
 import (
 	"context"
 	"fmt"
-	qs "github.com/google/go-querystring/query"
 	"net/url"
+	"strings"
+
+	qs "github.com/google/go-querystring/query"
 )
 
 type Lang string
@@ -470,5 +472,17 @@ func (c *Client) GetCardByTCGPlayerID(ctx context.Context, tcgPlayerID int) (Car
 
 func (c *Client) GetCard(ctx context.Context, id string) (Card, error) {
 	cardURI := fmt.Sprintf("cards/%s", id)
+	return c.getCard(ctx, cardURI)
+}
+
+func (c *Client) GetCardFromURI(ctx context.Context, uri string) (Card, error) {
+	parts := strings.Split(uri, "/")
+	if len(parts) < 6 {
+		return Card{}, fmt.Errorf("invalid card url format")
+	}
+	setCode := parts[len(parts)-3]
+	collectorNumber := parts[len(parts)-2]
+
+	cardURI := fmt.Sprintf("cards/%s/%s", setCode, collectorNumber)
 	return c.getCard(ctx, cardURI)
 }
