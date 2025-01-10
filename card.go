@@ -257,12 +257,12 @@ type CardFace struct {
 }
 
 type ImageURIs struct {
-	Small      string `json:"small"`
-	Normal     string `json:"normal"`
-	Large      string `json:"large"`
-	PNG        string `json:"png"`
-	ArtCrop    string `json:"art_crop"`
-	BorderCrop string `json:"border_crop"`
+	Small      *string `json:"small"`
+	Normal     *string `json:"normal"`
+	Large      *string `json:"large"`
+	PNG        *string `json:"png"`
+	ArtCrop    *string `json:"art_crop"`
+	BorderCrop *string `json:"border_crop"`
 }
 
 type Prices struct {
