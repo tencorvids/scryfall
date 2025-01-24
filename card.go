@@ -195,12 +195,14 @@ type Card struct {
 	EDHRECRank           *int          `json:"edhrec_rank"`
 	Set                  string        `json:"set"`
 	SetName              string        `json:"set_name"`
+	SetID                string        `json:"set_id"`
 	CollectorNumber      string        `json:"collector_number"`
 	SetURI               string        `json:"set_uri"`
 	SetSearchURI         string        `json:"set_search_uri"`
 	ScryfallSetURI       string        `json:"scryfall_set_uri"`
 	ImageURIs            *ImageURIs    `json:"image_uris"`
 	Prices               Prices        `json:"prices"`
+	ReleasedAt           Date          `json:"released_at"`
 	HighresImage         bool          `json:"highres_image"`
 	Reprint              bool          `json:"reprint"`
 	Digital              bool          `json:"digital"`
