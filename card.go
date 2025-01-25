@@ -240,6 +240,9 @@ type RelatedCard struct {
 }
 
 type CardFace struct {
+	Artist          *string   `json:"artist"`
+	ArtistID        *string   `json:"artist_id"`
+	CMC             *float64  `json:"cmc"`
 	Name            string    `json:"name"`
 	PrintedName     *string   `json:"printed_name"`
 	TypeLine        string    `json:"type_line"`
