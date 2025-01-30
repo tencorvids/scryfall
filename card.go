@@ -213,6 +213,7 @@ type Card struct {
 	Frame                Frame         `json:"frame"`
 	FrameEffects         []FrameEffect `json:"frame_effects"`
 	FullArt              bool          `json:"full_art"`
+	Games                []string      `json:"games"`
 	Watermark            *string       `json:"watermark"`
 	Preview              Preview       `json:"preview"`
 	PromoTypes           []string      `json:"promo_types,omitempty"`
